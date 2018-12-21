@@ -36,6 +36,12 @@ class Star {
    float r = map(z, 0, width, 16, 0); 
    ellipse(sx, sy, r, r);
    
+   //Making spheres rather than ellipses
+   //spher(2) 
+   //rotateX(a*0.4);
+  //rotateY(a*0.4); 
+  //rotateZ(a*0.4);
+   
    float px = map(x / pz, 0, 1, 0, width);
    float py = map(y / pz, 0, 1, 0, height);
    
