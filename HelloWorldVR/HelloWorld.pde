@@ -1,16 +1,9 @@
-import processing.sound.*;
-
 ArrayList<Object> ob; 
 Star[] stars = new Star[1000]; 
 Text t = new Text(); 
 Object o, x, s; 
 float a = 0; 
 float speed; 
-
- SoundFile file;
-  String audioName = "star-wars-theme-song.mp3";
-  String path;
-
 
 void setup(){
  
@@ -23,12 +16,7 @@ void setup(){
   
   //loop to institiate stars
   for (int i = 0; i < stars.length; i++){
-    stars[i] = new Star();
-    
-    
-    path = sketchPath(audioName); 
-    file = new SoundFile(this, path); 
-    file.play(); 
+    stars[i] = new Star(); 
   }
 }
 
@@ -51,12 +39,12 @@ void draw(){
     stars[i].show(); 
   }
   a += 0.01; 
+  
+  rotateX(a*0.04);
+  rotateY(a*0.04); 
+  rotateZ(a*0.04);
    t.show(); 
    
-   if (keyPressed) {
-        if (key == 'p' || key == 'P') {
-          file.play();
-        }
-      }
+ 
   
 }
