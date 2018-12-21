@@ -17,12 +17,14 @@ class Text{
   }
 
 void show(){
-    //pushMatrix();
+    pushMatrix();
+    
+    //controls the rotation with your mouse
     //rotateY(map(mouseX,0,width,-PI,PI));
     //rotateX(map(mouseY,0,width,-PI,PI));
     fill(195); 
     textSize(32); 
     text(hello, x, y, w, h);
-    //popMatrix(); 
+    popMatrix(); 
 }
 }
